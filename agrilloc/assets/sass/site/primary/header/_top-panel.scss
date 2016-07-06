@@ -1,0 +1,58 @@
+.top-panel {
+	padding: .5rem $grid-gutter-width/2;
+	text-align: left;
+	.container & {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	&__wrap {
+		&:after {
+			display: block;
+			clear: both;
+			width: 100%;
+			content: '';
+		}
+	}
+	&__message {
+		display: none;
+
+		@include media-breakpoint-up(md) {
+			display: block;
+		}
+		@include media-breakpoint-up(lg) {
+			float: left;
+		}
+		.info-block {
+			margin-top: 1em;
+
+			@include media-breakpoint-up(lg) {
+				float: left;
+				margin-top: 0;
+				margin-right: 1.5em;
+			}
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		.material-icons {
+			line-height: 2;
+			width: 2em;
+			height: 2em;
+			margin: 0 1em 0 0;
+			text-align: center;
+			vertical-align: middle;
+			border-radius: 2em;
+			background: #fff;
+
+			@include font-size(1);
+		}
+	}
+	&__search {
+		text-align: right;
+
+		@include media-breakpoint-up(md) {
+			float: right;
+			text-align: left;
+		}
+	}
+}

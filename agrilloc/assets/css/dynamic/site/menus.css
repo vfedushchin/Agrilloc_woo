@@ -1,0 +1,35 @@
+/* #Main Menu */
+.main-navigation .menu > li > a {
+	color: $regular_accent_color_2;
+}
+.main-navigation .menu > li > a:hover,
+.main-navigation .menu > li.menu-hover > a,
+.main-navigation .menu > li.current_page_item > a,
+.main-navigation .menu > li.current_page_ancestor > a,
+.main-navigation .menu > li.current-menu-item > a,
+.main-navigation .menu > li.current-menu-ancestor > a {
+	color: $regular_accent_color_1;
+}
+.main-navigation .sub-menu {
+	background: $regular_accent_color_3;
+}
+.main-navigation ul ul a {
+	color: $regular_text_color;
+}
+.main-navigation .sub-menu > li > a:hover,
+.main-navigation .sub-menu > li.menu-hover > a,
+.main-navigation .sub-menu > li.current_page_item > a,
+.main-navigation .sub-menu > li.current_page_ancestor > a,
+.main-navigation .sub-menu > li.current-menu-item > a,
+.main-navigation .sub-menu > li.current-menu-ancestor > a {
+	color: $regular_accent_color_1;
+}
+.menu-item__desc {
+	color: $regular_text_color;
+}
+
+/* #Footer Menu */
+.footer-menu__items li.current-menu-item a,
+.footer-menu__items li.current_page_item a {
+	color: $regular_text_color;
+}
