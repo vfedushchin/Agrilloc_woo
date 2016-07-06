@@ -138,3 +138,28 @@
 		}
 	}
 }
+
+
+
+$blog__pad: 70px;
+$blog-grid__pad: 30px;
+
+
+.blog-default,
+.posts-list--grid-2-cols,
+.posts-list--grid-3-cols,
+.blog-masonry-2-cols,
+.blog-masonry-3-cols {
+	.format-audio {
+		.post__cats {
+			position: absolute;
+			top: 30px;
+		}
+		.entry-header {
+			background: #333;
+			margin-left: -$blog__pad;
+			margin-right: -$blog__pad;
+			padding: 100px 30px 100px;
+		}
+	}
+}

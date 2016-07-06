@@ -242,6 +242,26 @@ function agrilloc_post_thumbnail_size( $args = array() ) {
 		$link_class = $args['class_prefix'] . 'fullwidth';
 	}
 
+	switch ( $layout ) {
+		case 'default':
+			$layout = '';
+			break;
+
+		case 'grid-2-cols':
+		case 'grid-3-cols':
+			$size = 'agrilloc-thumb-m';
+			break;
+
+		case 'masonry-2-cols':
+		case 'masonry-3-cols':
+			$size = 'agrilloc-thumb-m';
+
+			if ( 'gallery' === $format) {
+				$size = 'agrilloc-thumb-m2';
+			}
+			break;
+	}
+
 	return array(
 		'size'  => $size,
 		'class' => $link_class,

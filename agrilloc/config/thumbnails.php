@@ -11,8 +11,8 @@ function agrilloc_register_image_sizes() {
 
 	// Registers a new image sizes.
 	add_image_size( 'agrilloc-thumb-s', 150, 150, true );
-	add_image_size( 'agrilloc-thumb-m', 400, 400, true );
-	add_image_size( 'agrilloc-thumb-l', 1170, 780, true );
+	add_image_size( 'agrilloc-thumb-m', 370, 405, true );
+	add_image_size( 'agrilloc-thumb-l', 770, 405, true );
 	add_image_size( 'agrilloc-thumb-xl', 1920, 1080, true );
 	add_image_size( 'agrilloc-author-avatar', 512, 512, true );
 

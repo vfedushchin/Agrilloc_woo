@@ -40,8 +40,10 @@
 
 }
 
-
-.blog77 {
+.posts-list--grid-2-cols,
+.posts-list--grid-3-cols,
+.blog-masonry-2-cols,
+.blog-masonry-3-cols {
 	.share-btns-main {
 		order: 2;
 		position: relative;
@@ -49,20 +51,27 @@
 
 		.share-btns__show-icon {
 			display: inline-block;
+			cursor: pointer;
 		}
 
 		.share-btns__list {
 			position: absolute;
-			top: 0;
+			top: -10px;
 			right: -100%;
+			margin-right: 30px;
 			width: 230px;
 			transition: .4s all ease;
 			opacity: 0;
+			background: #fff;
+			padding: 10px;
+			padding-right: 0;
+			visibility: hidden;
 		}
 
 		&.show-share-list {
 			.share-btns__list {
 				opacity: 1;
+				visibility: visible;
 			}
 		}
 	}

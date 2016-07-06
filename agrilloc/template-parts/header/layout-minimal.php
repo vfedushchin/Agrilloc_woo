@@ -9,7 +9,6 @@
 ?>
 
 <div class="header-container__flex">
-	<?php agrilloc_social_list( 'header' ); ?>
 	<div class="site-branding">
 		<?php agrilloc_header_logo() ?>
 		<?php agrilloc_site_description(); ?>

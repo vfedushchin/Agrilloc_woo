@@ -185,13 +185,6 @@ function agrilloc_get_customizer_options() {
 				'type'     => 'section',
 				'panel'    => 'general_settings',
 			),
-			'header_social_links' => array(
-				'title'   => esc_html__( 'Show social links in header', 'agrilloc' ),
-				'section' => 'social_links',
-				'default' => true,
-				'field'   => 'checkbox',
-				'type'    => 'control',
-			),
 			'footer_social_links' => array(
 				'title'   => esc_html__( 'Show social links in footer', 'agrilloc' ),
 				'section' => 'social_links',
@@ -1896,11 +1889,13 @@ function agrilloc_get_fonts_options() {
  */
 function agrilloc_get_default_top_panel_text() {
 	return sprintf(
-		__( '<div class="info-block">%s 25 East 12th Street 16st Floor New York, NY 12222, United States</div><div class="info-block"> %s 800-2345-6789</div>', 'agrilloc' ),
-		'<i class="material-icons">place</i>',
-		'<i class="material-icons">call</i>'
+		'%1$s <span>%2$s</span> <span>%3$s</span>',
+		'<i class="fl-line-icon-set-flat10"></i>',
+		esc_html__( '800-2345-678;', 'mechanna' ),
+		esc_html__( '800-2345-678', 'mechanna' )
 	);
 }
+
 
 /**
  * Get default footer copyright.

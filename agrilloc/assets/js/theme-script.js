@@ -459,14 +459,13 @@
 
 
 
-jQuery(document).ready(function($){
-	// add/remove class for showing share-list in posts
-	$(".share-btns-main").on({
-		mouseenter: function () {
-			$(this).addClass('show-share-list');
+jQuery( document ).ready( function($) {
+	$( '.share-btns-main' ).on( {
+		mouseenter: function() {
+			$( this ).addClass( 'show-share-list' );
 		},
-		mouseleave: function () {
-			$(this).removeClass('show-share-list');
+		mouseleave: function() {
+			$( this ).removeClass( 'show-share-list' );
 		}
 	});
 })

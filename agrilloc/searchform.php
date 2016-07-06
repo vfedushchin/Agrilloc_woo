@@ -13,5 +13,5 @@
 			value="<?php echo get_search_query() ?>" name="s"
 			title="<?php echo esc_attr_x( 'Search for:', 'label', 'agrilloc' ) ?>" />
 	</label>
-	<button type="submit" class="search-form__submit btn btn-primary"><i class="material-icons">search</i></button>
+	<button type="submit" class="search-form__submit btn btn-primary"><i class="material-icons">search</i><i class="fl-line-icon-set-magnification3"></i></button>
 </form>
