@@ -1,5 +1,5 @@
 p {
-	margin: 0 0 1em;
+	margin: 0 0 10px;
 }
 
 dfn, cite, em, i {
@@ -33,15 +33,14 @@ pre {
 	@include font-size(1);
 }
 
-code, kbd, tt, var {
+kbd, tt, var {
 	font-family: $font__code;
 
 	@include font-size(0.9375);
 }
 
 code {
-	padding: 2px 5px;
-	border: 1px solid $color__background-hr;
+	padding: 2px 10px;
 }
 
 abbr, acronym {

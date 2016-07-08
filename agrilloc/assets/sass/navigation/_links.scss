@@ -1,5 +1,8 @@
 a {
 	text-decoration: none;
+	.site-content & {
+		transition: .4s all ease;
+	}
 	&:focus {
 		outline: thin dotted;
 	}

@@ -1,4 +1,8 @@
 /* #Widgets (defaults) */
+.widget:not(.widget-subscribe) .widget-title {
+	color: $regular_h5_color;
+	letter-spacing: 0;
+}
 .widget li {
 	color: $regular_link_color;
 }

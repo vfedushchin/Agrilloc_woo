@@ -5,7 +5,7 @@
 .btn-default:hover,
 .btn-primary:hover,
 .btn-secondary:hover {
-	color: $invert_link_color;
+	color: $regular_accent_color_2;
 }
 .btn-default {
 	background-color: $regular_link_color;
@@ -19,15 +19,17 @@
 	box-shadow: 0 0 10px $regular_link_color;
 }
 .btn-primary {
-	background-color: $regular_accent_color_1;
-	border-color: $regular_accent_color_1;
+	font-size: 14px;
+	font-family: @font_family( $h3_font_family );
+	color: $regular_accent_color_1;
+	background: none;
 }
 .btn-primary:hover {
-	background-color: @darken( $regular_accent_color_1, 10% );
-	border-color: @darken( $regular_accent_color_1, 10% );
+	background-color: $regular_accent_color_2;
+	background: none;
 }
 .btn-primary:focus {
-	box-shadow: 0 0 10px $regular_accent_color_1;
+
 }
 .btn-secondary {
 	background-color: $regular_accent_color_2;

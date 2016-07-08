@@ -7,6 +7,14 @@
 			right: 15px;
 			color: #fff;
 		}
+		p.sp-layer {
+			font-size: 18px;
+			line-height: 25px;
+			display: none;
+			@include media-breakpoint-up(md) {
+				display: block;
+			}
+		}
 		.sp-selected-thumbnail {
 			border: 4px solid;
 		}
@@ -84,8 +92,11 @@
 		.sp-button {
 			width: 15px;
 			height: 15px;
-			margin: 4px 15px;
-			border-color: #fff;
+			margin: 4px 5px;
+			border: none;
+			background-color: rgba(#fff,0.15);
+			transition: .4s all ease;
+			&:hover,
 			&.sp-selected-button {
 				background-color: #fff;
 			}
@@ -94,6 +105,7 @@
 			font-size: 20px;
 			line-height: 1.2;
 			overflow: hidden;
+			transform: translateY(-50%) !important;
 
 			@include media-breakpoint-up(sm) {
 				font-size: 30px;
@@ -102,21 +114,35 @@
 				font-size: 40px;
 			}
 			@include media-breakpoint-up(lg) {
-				font-size: 60px;
+				font-size: 45px;
 			}
 			@include media-breakpoint-up(xl) {
-				font-size: 80px;
+				font-size: 50px;
 			}
 			a {
-				white-space: nowrap;
+				color: #000;
+				background: #fff;
+				//white-space: nowrap;
+				padding: 4px 15px;
 			}
 		}
 		.sp-slide {
-			text-align: center;
+			text-align: left;
+			.sp-more,
+			h2,
+			p {
+				left: 5% !important;
+				@include media-breakpoint-up(lg) {
+					max-width: 1000px;
+					left: 50% !important;
+					margin-left: -500px !important;
+				}
+
+			}
 			&.text-wrapped {
 				h2.sp-title {
-					font-size: 14px;
-					line-height: 1.2;
+					font-size: 18px;
+					line-height: 1.4;
 
 					@include media-breakpoint-up(sm) {
 						font-size: 18px;

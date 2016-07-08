@@ -321,6 +321,13 @@ function agrilloc_get_customizer_options() {
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
+			'regular_accent_color_9' => array(
+				'title'   => esc_html__( 'Accent color (9)', 'agrilloc' ),
+				'section' => 'regular_scheme',
+				'default' => '#eef4fa',
+				'field'   => 'hex_color',
+				'type'    => 'control',
+			),
 			'regular_text_color' => array(
 				'title'   => esc_html__( 'Text color', 'agrilloc' ),
 				'section' => 'regular_scheme',
@@ -1772,6 +1779,7 @@ function agrilloc_get_dynamic_css_options() {
 			'regular_accent_color_6',
 			'regular_accent_color_7',
 			'regular_accent_color_8',
+			'regular_accent_color_9',
 			'regular_text_color',
 			'regular_link_color',
 			'regular_link_hover_color',

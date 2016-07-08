@@ -16,8 +16,10 @@ function agrilloc_register_image_sizes() {
 	add_image_size( 'agrilloc-thumb-xl', 1920, 1080, true );
 	add_image_size( 'agrilloc-author-avatar', 512, 512, true );
 
-	add_image_size( 'agrilloc-thumb-240-100', 240, 100, true );
-	add_image_size( 'agrilloc-thumb-560-350', 560, 350, true );
+  add_image_size( 'agrilloc-thumb-570-325', 570, 325, true );
+  add_image_size( 'agrilloc-thumb-370-325', 370, 325, true );
+	add_image_size( 'agrilloc-thumb-770-325', 770, 325, true );
+	add_image_size( 'agrilloc-thumb-110-110', 110, 110, true );
 
 
 

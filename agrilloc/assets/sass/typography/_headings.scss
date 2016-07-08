@@ -1,3 +1,38 @@
 h1, h2, h3, h4, h5, h6 {
 	margin: 15px 0;
 }
+
+h1 + p {
+	margin-top: 19px;
+}
+p + h2 {
+	margin-top: 30px;
+}
+h2 + p {
+	margin-top: 23px;
+}
+h3 + p {
+	margin-top: 23px;
+}
+p + h3 {
+	margin-top: 30px;
+}
+h4 + p {
+	margin-top: 5px;
+}
+p + h4 {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+h5 + p {
+	margin-top: 28px;
+}
+p + h5 {
+	margin-top: 24px;
+}
+h6 + p {
+	margin-top: 20px;
+}
+p + h6 {
+	margin-top: 30px;
+}

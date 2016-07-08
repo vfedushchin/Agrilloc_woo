@@ -1,6 +1,7 @@
 ul, ol {
 	margin: 0 0 1.5em 1.5em;
 	padding-left:0;
+	font-size: 14px;
 }
 
 ul {
@@ -8,7 +9,8 @@ ul {
 }
 
 ol {
-	list-style: decimal;
+	list-style: none;
+	margin-left: 0;
 }
 
 li > ul,
@@ -32,4 +34,61 @@ dd {
 		display: inline-block;
 		vertical-align: top;
 	}
+}
+
+
+/*==================   Index List  ======================*/
+ol {
+	counter-reset: li;
+
+	li {
+		&:before {
+			content: counter(li, decimal-leading-zero)'.';
+			counter-increment: li;
+			padding-right: 0.5em;
+			font-size: 11px;
+		}
+	}
+}
+
+
+.site-main ul {
+	margin: 0 0 1.5em 0;
+	line-height: 35px;
+	list-style: none;
+	li {
+		position: relative;
+		padding-left: 30px;
+		&::before {
+			@include font-awesome-icon();
+			font-size: 11px;
+			position: absolute;
+			top: 13px;
+			left: 0;
+			content: '\f046';
+
+		}
+
+		i {
+			min-width: 31px;
+			font-size: 18px;
+		}
+	}
+}
+
+.site-main .list-no-styles ul {
+	li{
+		margin-left: 0;
+
+		&:before {
+			display: none;
+		}
+	}
+
+}
+
+
+
+.site-main ol {
+	line-height: 32px;
 }

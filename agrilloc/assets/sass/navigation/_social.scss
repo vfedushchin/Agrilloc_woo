@@ -8,6 +8,7 @@
 			display: block;
 			text-decoration: none;
 			text-align: center;
+			margin: 0 10px;
 			&:hover {
 				text-decoration: none;
 			}
@@ -68,11 +69,8 @@
 				@include font-awesome-icon();
 				@include font-size(1);
 				display: block;
-				width: 40px;
-				height: 40px;
-				line-height: 40px;
+				padding: 4px;
 				margin: auto;
-				border-radius: 50%;
 				.social-list--text & {
 					display: none;
 				}
@@ -90,7 +88,7 @@
 	}
 	&--widget {
 		a {
-			opacity: .3;
+			opacity: 1;
 			.invert & {
 				opacity: 1;
 			}

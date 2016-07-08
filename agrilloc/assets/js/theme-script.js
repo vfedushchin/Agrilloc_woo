@@ -135,6 +135,10 @@
 							spaceBetween: Math.floor( spaceBetweenSlides * 0.5 )
 						},
 						769: {
+							slidesPerView: Math.floor( slidesPerView * 0.4 ),
+							spaceBetween: Math.floor( spaceBetweenSlides * 0.4 )
+						},
+						469: {
 							slidesPerView: ( 0 !== Math.floor( slidesPerView * 0.25 ) ) ? Math.floor( slidesPerView * 0.25 ) : 1
 						},
 					};

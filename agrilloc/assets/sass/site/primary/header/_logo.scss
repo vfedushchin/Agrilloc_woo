@@ -1,9 +1,15 @@
 .site-logo {
 	margin: 0;
+  text-transform: uppercase;
 	&__link {
 		text-decoration: none;
 		&:focus {
 			outline: none;
 		}
 	}
+}
+
+.site-description {
+  font-size: 12px;
+  margin-top: -12px;
 }

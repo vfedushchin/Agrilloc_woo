@@ -59,10 +59,12 @@
 			top: -10px;
 			right: -100%;
 			margin-right: 30px;
-			width: 230px;
+			width: 140px;
+			@include media-breakpoint-up(lg) {
+				width: 230px;
+			}
 			transition: .4s all ease;
 			opacity: 0;
-			background: #fff;
 			padding: 10px;
 			padding-right: 0;
 			visibility: hidden;
@@ -72,6 +74,12 @@
 			.share-btns__list {
 				opacity: 1;
 				visibility: visible;
+			}
+
+			& + .btn {
+				opacity: 0;
+				transition: .3s all ease;
+				pointer-events: none;
 			}
 		}
 	}

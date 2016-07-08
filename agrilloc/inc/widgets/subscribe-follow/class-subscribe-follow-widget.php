@@ -208,10 +208,7 @@ class Agrilloc_Subscribe_Follow_Widget extends Cherry_Abstract_Widget {
 
 		$follow_template = locate_template( 'inc/widgets/subscribe-follow/view/follow-view.php', false, false );
 
-		// Load follow template
-		if ( $follow_template && $follow_enabled ) {
-			include $follow_template;
-		}
+
 
 		$subscribe_template = locate_template( 'inc/widgets/subscribe-follow/view/subcribe-view.php', false, false );
 
@@ -223,6 +220,11 @@ class Agrilloc_Subscribe_Follow_Widget extends Cherry_Abstract_Widget {
 			include $subscribe_template;
 		} elseif ( ! $api_key || ! $list_id ) {
 			esc_html_e( 'Please set up MailChimp API key and List ID', 'agrilloc' );
+		}
+
+		// Load follow template
+		if ( $follow_template && $follow_enabled ) {
+			include $follow_template;
 		}
 
 		$background_enabled = ( ! empty( $instance['enable_background'] ) ) ? $instance['enable_background'] : false;

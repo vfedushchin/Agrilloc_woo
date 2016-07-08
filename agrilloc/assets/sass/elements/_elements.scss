@@ -25,9 +25,11 @@ blockquote, q {
 blockquote {
 	position: relative;
 	margin: 0 0 1em;
-	padding: 1em 1em 1em 2.5em;
+	padding: 1em 0.5em 1em 1.8em;
+	font-size: 19px;
+	line-height: 27px;
 	@include media-breakpoint-up(lg) {
-		padding: 1em 1.5em 1em 3.5em;
+		padding: 1em 0.5em 1em 2.8em;
 	}
 	p {
 		margin: 0;
@@ -41,15 +43,17 @@ blockquote {
 		}
 	}
 	&:before {
-		content: "format_quote";
-		@include material-icon();
+		content: "\f10d";
+		@include font-awesome-icon();
 		position: absolute;
 		font-size: 2em;
-		top: 10px;
-		left: 10px;
+		left: 0;
+		top: 0;
+		color: #f4f2ea;
+		z-index: -1;
 		@include media-breakpoint-up(lg) {
-			font-size: 2.5em;
-			left: 20px;
+			font-size: 108px;
+			top: -7px;
 		}
 	}
 }
@@ -58,7 +62,7 @@ hr {
 	background-color: $color__background-hr;
 	border: 0;
 	height: 1px;
-	margin: 1.5em 0;
+	margin: 2.5em 0;
 }
 
 /*--------------------------------------------------------------

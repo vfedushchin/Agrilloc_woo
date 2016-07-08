@@ -15,36 +15,22 @@
 	position: relative;
 	margin-top: 3em;
 
-	@include media-breakpoint-up(lg) {
-		padding-left: 70px;
-		padding-right: 70px;
+	body:not(.page):not(.single) & {
+		@include media-breakpoint-up(lg) {
+			padding-left: 70px;
+			padding-right: 70px;
 
-		.post-thumbnail {
-			margin-left: -70px;
-			margin-right: -70px;
-		}
+			.post-thumbnail {
+				margin-left: -70px;
+				margin-right: -70px;
+			}
 
-		.posts-list--grid-2-cols &,
-		.posts-list--grid-3-cols &,
-		.blog-masonry-2-cols &,
-		.blog-masonry-3-cols &{
-
-				padding-left: 30px;
-				padding-right: 30px;
-
-				.post-thumbnail {
-					margin-left: -30px;
-					margin-right: -30px;
-				}
-
-
-		}
-
-		&.has-post-thumbnail .post-content-all {
-			position: relative;
-			background: #fff;
-			padding: 30px;
-			margin-top: -5em;
+			&.has-post-thumbnail .post-content-all {
+				position: relative;
+				background: #fff;
+				padding: 22px 30px 40px;
+				margin-top: -5.25em;
+			}
 		}
 	}
 
@@ -68,6 +54,24 @@
 	}
 }
 
+
+body:not(.page):not(.single) {
+	.posts-list--grid-2-cols,
+	.posts-list--grid-3-cols,
+	.blog-masonry-2-cols,
+	.blog-masonry-3-cols {
+		.hentry {
+			padding-left: 30px;
+			padding-right: 30px;
+
+			.post-thumbnail {
+				margin-left: -30px;
+				margin-right: -30px;
+			}
+		}
+	}
+}
+
 /*--------------------------------------------------------------
 ### Entry (header, content, footer)
 --------------------------------------------------------------*/
@@ -81,7 +85,8 @@
 		}
 		.posts-list--default & {
 			@include media-breakpoint-up(lg) {
-				font-size: 30px;
+				font-size: 28px;
+				line-height: 1.6;
 			}
 		}
 	}
@@ -90,6 +95,7 @@
 		font-style: italic;
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 		align-items: center;
 		.entry-summary + &,
 		.entry-content + & {
@@ -123,7 +129,7 @@
 		justify-content: space-between;
 		align-items: center;
 		.btn {
-
+			order: -1;
 		}
 	}
 }
@@ -149,6 +155,7 @@
 		&__img {
 			display: inline-block;
 			vertical-align: top;
+			width: 100%;
 			.entry-header + .post-thumbnail > & {
 				margin-top: 25px;
 			}
@@ -166,10 +173,15 @@
 	}
 	&__cats {
 		a {
-			line-height: 22px;
+			transition: .4s all ease;
+			font-size: 14px;
+			line-height: 32px;
 			display: inline-block;
 			margin: 0 0 3px 0;
-			padding: 0 6px;
+			padding: 0 8px;
+			@include media-breakpoint-up(lg) {
+				padding: 0 15px;
+			}
 			vertical-align: top;
 			text-decoration: none;
 		}
@@ -181,7 +193,8 @@
 				left: 10px;
 
 				@include media-breakpoint-up(lg) {
-					top: 30px;
+					top: 70px;
+					left: 70px;
 				}
 			}
 		}
