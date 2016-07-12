@@ -3,6 +3,9 @@
 .entry-summary {
 	margin: 1em 0 0;
 }
+.entry-content {
+	margin: 1.3em 0 0;
+}
 
 .card-columns {
 	padding-top: 3em;
@@ -13,7 +16,7 @@
 --------------------------------------------------------------*/
 .hentry {
 	position: relative;
-	margin-top: 3em;
+	margin-top: 30px;
 
 	body:not(.page):not(.single) & {
 		@include media-breakpoint-up(lg) {
@@ -25,11 +28,13 @@
 				margin-right: -70px;
 			}
 
+			&.format-status .post-content-all,
 			&.has-post-thumbnail .post-content-all {
 				position: relative;
 				background: #fff;
-				padding: 22px 30px 40px;
-				margin-top: -5.25em;
+				padding: 22px 30px 0;
+				margin-top: -3.75em;
+				z-index: 1;
 			}
 		}
 	}
@@ -58,17 +63,38 @@
 body:not(.page):not(.single) {
 	.posts-list--grid-2-cols,
 	.posts-list--grid-3-cols,
-	.blog-masonry-2-cols,
-	.blog-masonry-3-cols {
+	.posts-list--masonry-2-cols,
+	.posts-list--masonry-3-cols {
 		.hentry {
-			padding-left: 30px;
-			padding-right: 30px;
+			padding-left: 10px;
+			padding-right: 10px;
 
 			.post-thumbnail {
-				margin-left: -30px;
-				margin-right: -30px;
+				margin-left: -10px;
+				margin-right: -10px;
 			}
 		}
+
+		@include media-breakpoint-up(xl) {
+			.hentry {
+				padding-left: 30px;
+				padding-right: 30px;
+
+				.post-thumbnail {
+					margin-left: -30px;
+					margin-right: -30px;
+				}
+			}
+		}
+
+		.post__cats {
+			@include media-breakpoint-up(lg) {
+				top: 30px;
+				left: 30px;
+				right: 10px;
+			}
+		}
+
 	}
 }
 
@@ -79,6 +105,7 @@ body:not(.page):not(.single) {
 	&-title {
 		font-size: 20px;
 		&:first-child {
+			.post-content-all &,
 			.entry-header & {
 				margin-top: 0;
 			}
@@ -93,13 +120,17 @@ body:not(.page):not(.single) {
 	&-meta {
 		font-size: 13px;
 		font-style: italic;
+		font-weight: 400;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
 		align-items: center;
 		.entry-summary + &,
 		.entry-content + & {
-			margin-top: 1em;
+			margin-top: 0.6em;
+			@include media-breakpoint-up(lg) {
+				margin-top: 0.2em;
+			}
 		}
 	}
 	&-summary,
@@ -125,9 +156,13 @@ body:not(.page):not(.single) {
 		}
 		position: relative;
 		margin-top: 1em;
+		@include media-breakpoint-up(lg) {
+			margin-top: 1.75em;
+		}
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		flex-wrap: wrap;
 		.btn {
 			order: -1;
 		}
@@ -163,10 +198,10 @@ body:not(.page):not(.single) {
 		&--fullwidth {
 			.posts-list & {
 				display: block;
-				margin-bottom: 1em;
+				margin-bottom: 0;
 
 				@include media-breakpoint-up(lg) {
-					margin-bottom: 1.5em;
+					margin-bottom: 0;
 				}
 			}
 		}
@@ -185,6 +220,8 @@ body:not(.page):not(.single) {
 			vertical-align: top;
 			text-decoration: none;
 		}
+		.post-thumbnail + &,
+		.post-gallery + &,
 		.post-thumbnail--fullwidth + & {
 			.has-post-thumbnail & {
 				position: absolute;
@@ -217,7 +254,7 @@ body:not(.page):not(.single) {
 		.material-icons,
 		.fa {
 			font-size: 16px;
-			margin-right: 10px;
+			margin-right: 14px;
 			vertical-align: initial;
 			.invert & {
 				color: inherit;
@@ -230,7 +267,12 @@ body:not(.page):not(.single) {
 	&__author,
 	&__date,
 	&__comments {
-		margin-right: 15px;
+		text-transform: capitalize;
+		margin-right: 10px;
+		display: inline-block;
+		@include media-breakpoint-up(lg) {
+			margin-right: 20px;
+		}
 		.single & {
 			margin-right: 0;
 			margin-left: 15px;
@@ -239,13 +281,17 @@ body:not(.page):not(.single) {
 	&__tags {
 		font-size: 14px;
 		font-style: normal;
-		margin-top: -10px;
+		margin-top: -4px;
+		margin-left: -4px;
+		margin-right: -4px;
 		a {
 			display: inline-block;
-			padding: 10px;
+			padding: 5px 14px;
+			font-weight: 400;
 			background: #000;
 			margin-top: 10px;
-			margin-left: 7px;
+			margin-left: 4px;
+			margin-right: 4px;
 		}
 		.single-post & {
 			margin-top: 0;
@@ -267,7 +313,11 @@ body:not(.page):not(.single) {
 --------------------------------------------------------------*/
 .btn {
 	.posts-list__item & {
-		padding: $button__indents;
+		padding: 13px 20px;
+		@include media-breakpoint-up(xl) {
+			padding: 13px 43px;
+		}
+
 		&__text {
 			// display: none;
 		}
@@ -285,6 +335,7 @@ body:not(.page):not(.single) {
 		.posts-list--default:not(.two-sidebars) & {
 			@include media-breakpoint-up(sm) {
 				padding: $button__indents;
+				padding: 13px 43px;
 			}
 			&__text {
 				@include media-breakpoint-up(sm) {
@@ -306,3 +357,26 @@ body:not(.page):not(.single) {
 ### Sticky Post
 --------------------------------------------------------------*/
 @import "sticky";
+
+
+
+.blog {
+	.post__cats {
+		padding-left: 0;
+	}
+	.no-thumb {
+		.post__cats {
+			padding-left: 30px;
+			@include media-breakpoint-up(lg) {
+				padding-left: 70px;
+			}
+		}
+	}
+	.post-content-all {
+		padding: 2px 30px 0;
+		margin-top: 17px;
+	}
+	.has-post-thumbnail .post-thumbnail--fullwidth + .post__cats {
+		padding-left: 0;
+	}
+}

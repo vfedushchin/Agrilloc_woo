@@ -62,24 +62,21 @@
 	&-button-prev {
 		top: 50%;
 		display: none;
-		width: 50px;
-		height: 50px;
-		margin: -25px 0 0 0;
+		width: 35px;
+		height: 35px;
+		margin: -17px 0 0 0;
 		background-image: none;
+		border-radius: 3px;
 		.fa,
 		.material-icons {
-			margin: 13px;
+			margin: 9px;
 		}
 	}
 	&-button-next {
 		right: 0;
-
-		@include border-left-radius($border__radius);
 	}
 	&-button-prev {
 		left: 0;
-
-		@include border-right-radius($border__radius);
 	}
 }
 

@@ -1,4 +1,8 @@
 .share-btns {
+	&-main {
+		margin-top: 5px;
+		margin-left: 10px;
+	}
 	&__list {
 		.hentry & {
 			float: left;
@@ -12,8 +16,8 @@
 		vertical-align: top;
 
 		& + .share-btns__item {
-			margin-left: 10px;
-			@include media-breakpoint-up(lg) {
+			margin-left: 15px;
+			@include media-breakpoint-up(xl) {
 				margin-left: 30px;
 			}
 		}
@@ -27,7 +31,7 @@
 		@include font-size(1);
 		font-size: 18px;
 		&:hover {
-			opacity: .3;
+			opacity: 1;
 		}
 	}
 
@@ -40,46 +44,50 @@
 
 }
 
-.posts-list--grid-2-cols,
-.posts-list--grid-3-cols,
-.blog-masonry-2-cols,
-.blog-masonry-3-cols {
-	.share-btns-main {
-		order: 2;
-		position: relative;
-		display: inline-block;
 
-		.share-btns__show-icon {
+
+@include media-breakpoint-up(xl) {
+	.posts-list--grid-2-cols,
+	.posts-list--grid-3-cols,
+	.blog-masonry-2-cols,
+	.blog-masonry-3-cols {
+		.share-btns-main {
+			order: 2;
+			position: relative;
 			display: inline-block;
-			cursor: pointer;
-		}
 
-		.share-btns__list {
-			position: absolute;
-			top: -10px;
-			right: -100%;
-			margin-right: 30px;
-			width: 140px;
-			@include media-breakpoint-up(lg) {
-				width: 230px;
+			.share-btns__show-icon {
+				display: inline-block;
+				cursor: pointer;
 			}
-			transition: .4s all ease;
-			opacity: 0;
-			padding: 10px;
-			padding-right: 0;
-			visibility: hidden;
-		}
 
-		&.show-share-list {
 			.share-btns__list {
-				opacity: 1;
-				visibility: visible;
+				position: absolute;
+				top: -12px;
+				right: -100%;
+				margin-right: 30px;
+				width: 140px;
+				@include media-breakpoint-up(lg) {
+					width: 230px;
+				}
+				transition: .4s all ease;
+				opacity: 0;
+				padding: 10px;
+				padding-right: 0;
+				visibility: hidden;
 			}
 
-			& + .btn {
-				opacity: 0;
-				transition: .3s all ease;
-				pointer-events: none;
+			&.show-share-list {
+				.share-btns__list {
+					opacity: 1;
+					visibility: visible;
+				}
+
+				& + .btn {
+					opacity: 0;
+					transition: .3s all ease;
+					pointer-events: none;
+				}
 			}
 		}
 	}

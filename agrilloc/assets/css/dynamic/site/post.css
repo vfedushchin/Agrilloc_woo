@@ -6,7 +6,7 @@
 }
 .sticky__label {
 	color: $invert_link_color;
-	background-color: $regular_accent_color_1;
+	border-color: transparent $regular_accent_color_3; transparent transparent;
 }
 
 .post__cats a:hover {
@@ -17,11 +17,30 @@
 .post__tags .material-icons,
 .entry-meta .fa,
 .post__tags .fa {
-	color: @alpha( $regular_accent_color_1, 30 );
+	color: $regular_accent_color_5;
 }
 .posted-by,
 .posted-by__author,
 .post-featured-content {
+	color: $regular_accent_color_2;
+}
+
+.post__tags a{
+	font-family: @font_family( $h3_font_family );
+	color: $regular_h3_color;
+	background: $regular_accent_color_5;
+}
+.post__tags a:hover{
+	color: $regular_accent_color_5;
+	background: $regular_accent_color_1;
+}
+
+.post__comments a,
+.post__date a {
+	color: $regular_text_color;
+}
+.post__comments a:hover,
+.post__date a:hover {
 	color: $regular_accent_color_2;
 }
 
@@ -37,8 +56,11 @@
 }
 .post-format-link,
 .post-format-link:hover {
-	color: $invert_link_color;
-	background-color: @alpha( $regular_accent_color_1, 80 );
+	text-decoration: none;
+	color: $regular_accent_color_4;
+}
+.post-format-link:hover {
+	color: $regular_accent_color_1;
 }
 
 /* #Author Bio */
@@ -55,4 +77,25 @@
 }
 #cancel-comment-reply-link:hover {
 	color: $regular_accent_color_2;
+}
+
+
+
+body:not(.page):not(.single) .format-audio .entry-header {
+	background: $regular_accent_color_4;
+}
+body:not(.page):not(.single) .format-quote .entry-header,
+body:not(.page):not(.single) .format-link .entry-header {
+	background: $regular_accent_color_5;
+}
+body:not(.page):not(.single) .format-status .entry-header {
+	background: $regular_accent_color_6;
+}
+body:not(.page):not(.single) .format-status + .format-status .entry-header {
+	background: $regular_accent_color_7;
+}
+
+body:not(.page):not(.single) .format-quote blockquote:before {
+	color: $regular_accent_color_4;
+	opacity: 0.2;
 }

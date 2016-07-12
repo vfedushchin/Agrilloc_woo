@@ -7,14 +7,14 @@
 }
 .swiper-button-next,
 .swiper-button-prev {
-	color: $invert_link_color;
-	background-color: $regular_accent_color_2;
+	color: $regular_h3_color;
+	background-color: $invert_link_color;;
 }
 .swiper-button-next:not(.swiper-button-disabled):hover {
 	color: $invert_link_color;
-	background-color: $regular_accent_color_1;
+	background-color: $regular_accent_color_3;
 }
 .swiper-button-prev:not(.swiper-button-disabled):hover {
 	color: $invert_link_color;
-	background-color: $regular_accent_color_1;
+	background-color: $regular_accent_color_3;
 }

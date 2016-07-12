@@ -106,6 +106,8 @@
 			line-height: 1.2;
 			overflow: hidden;
 			transform: translateY(-50%) !important;
+			border-left: 15px solid #fff;
+			padding: 10px 0;
 
 			@include media-breakpoint-up(sm) {
 				font-size: 30px;
@@ -118,12 +120,17 @@
 			}
 			@include media-breakpoint-up(xl) {
 				font-size: 50px;
+				line-height: 69px;
 			}
 			a {
 				color: #000;
 				background: #fff;
-				//white-space: nowrap;
-				padding: 4px 15px;
+				outline: #fff solid 0.3em;
+				@include media-breakpoint-down(md) {
+					white-space: nowrap;
+				}
+				padding: 14px 15px 14px 0;
+
 			}
 		}
 		.sp-slide {
@@ -139,6 +146,21 @@
 				}
 
 			}
+
+			.sp-more {
+				margin-top: 50px;
+				font-size: 16px;
+				.btn {
+					transition: .4s all ease;
+					padding: 15px 30px;
+					&:hover {
+						color: #000;
+						background: #fff;
+						border-color: #fff;
+					}
+				}
+			}
+
 			&.text-wrapped {
 				h2.sp-title {
 					font-size: 18px;

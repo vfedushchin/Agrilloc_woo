@@ -1485,7 +1485,6 @@ function agrilloc_get_customizer_options() {
 				'default' => 'fullwidth',
 				'field'   => 'select',
 				'choices' => array(
-					'small'     => esc_html__( 'Small', 'agrilloc' ),
 					'fullwidth' => esc_html__( 'Fullwidth', 'agrilloc' ),
 				),
 				'type' => 'control',
@@ -1493,7 +1492,7 @@ function agrilloc_get_customizer_options() {
 			'blog_read_more_text' => array(
 				'title'   => esc_html__( 'Read More button text', 'agrilloc' ),
 				'section' => 'blog',
-				'default' => esc_html__( 'More', 'agrilloc' ),
+				'default' => esc_html__( 'Continue reading', 'agrilloc' ),
 				'field'   => 'text',
 				'type'    => 'control',
 			),
