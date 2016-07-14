@@ -29,16 +29,6 @@
 
 			<?php $cats_visible = agrilloc_is_meta_visible( 'blog_post_categories', 'loop' ) ? 'true' : 'false'; ?>
 
-			<?php $utility->meta_data->get_terms( array(
-					'visible' => $cats_visible,
-					'type'    => 'category',
-					'icon'    => '',
-					'before'  => '<div class="post__cats">',
-					'after'   => '</div>',
-					'echo'    => true,
-				) );
-			?>
-
 			<?php agrilloc_sticky_label(); ?>
 		</figure><!-- .post-thumbnail -->
 

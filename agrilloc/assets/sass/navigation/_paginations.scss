@@ -41,20 +41,24 @@
 }
 
 .pagination {
-	margin: 2em 0;
+	text-align: center;
+	margin: 4em 0 3em;
 	.card-columns + & {
 		margin-top: 0;
 	}
 }
 .page-numbers {
-	line-height: 3;
+	line-height: 40px;
 	display: inline-block;
-	min-width: 3em;
-	height: 3em;
-	margin: 0 5px 5px 0;
+	min-width: 4px;
+	height: 40px;
+	margin: 0 4px 5px 0;
+	@include media-breakpoint-up(sm) {
+		margin: 0 10px 5px 0;
+	}
+	padding: 0 2px;
 	text-align: center;
 	text-decoration: none;
-	border: 1px solid $color__background-hr;
 
 	@include border-radius;
 	&.dots {
@@ -64,10 +68,19 @@
 	}
 	&.next,
 	&.prev {
+		padding: 0 16px;
+		@include media-breakpoint-up(lg) {
+			padding: 0 24px;
+		}
+		float: right;
 		border: none;
 		i {
 			vertical-align: middle;
+			display: none;
 		}
+	}
+	&.prev {
+		float: left;
 	}
 }
 
@@ -80,10 +93,10 @@
 	}
 	a,
 	> .page-links__item {
-		line-height: 3;
+		line-height: 40px;
 		display: inline-block;
-		min-width: 3em;
-		height: 3em;
+		min-width: 40px;
+		height: 40px;
 		margin: 0 5px 5px 0;
 		text-align: center;
 		border: 1px solid $color__background-hr;

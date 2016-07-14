@@ -9,6 +9,7 @@
 		}
 	}
 	&-form {
+		font-size: 14px;
 		&-comment,
 		&-author,
 		&-email,
@@ -17,6 +18,15 @@
 		}
 		.form-submit {
 			margin: 1em 0 0 0;
+
+			.submit {
+				@include btn;
+				@include border-radius;
+				padding: 13px 20px;
+				@include media-breakpoint-up(xl) {
+					padding: 13px 43px;
+				}
+			}
 		}
 		&__field {
 			width: 100%;

@@ -33,15 +33,19 @@
 		}
 	}
 
-	.entry-title {
-		.posts-list--grid-2-cols &,
-		.posts-list--grid-3-cols & {
-			@include media-breakpoint-up(lg) {
-				font-size: 16px;
-			}
-		}
-	}
 	.post-thumbnail__img {
 		width: 100%;
 	}
 }
+
+.entry-title {
+		.posts-list--masonry-2-cols &,
+		.posts-list--masonry-3-cols &,
+		.posts-list--grid-2-cols &,
+		.posts-list--grid-3-cols & {
+			@include media-breakpoint-up(lg) {
+				font-size: 18px;
+				line-height: 24px;
+			}
+		}
+	}

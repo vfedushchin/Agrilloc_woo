@@ -5,8 +5,6 @@
 	&-slide {
 		&:hover {
 			background-color: #eef4fa;
-
-			@include border-radius;
 		}
 		.widget-carousel & {
 			display: flex;
@@ -17,8 +15,6 @@
 			overflow: hidden;
 			flex-direction: column;
 			width: 100%;
-
-			@include border-radius;
 			justify-content: space-between;
 			align-self: stretch;
 		}

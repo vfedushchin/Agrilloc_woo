@@ -51,6 +51,16 @@ ol {
 	}
 }
 
+.site-main ol.comment-list ol,
+.site-main ol.comment-list {
+	font-size: 16px;
+	line-height: 25px;
+	li {
+		&:before {
+			display: none;
+		}
+	}
+}
 
 .site-main ul {
 	margin: 0 0 1.5em 0;

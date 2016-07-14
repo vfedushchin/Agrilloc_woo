@@ -8,7 +8,7 @@
 }
 
 .card-columns {
-	padding-top: 3em;
+	padding-top: 31px;
 }
 
 /*--------------------------------------------------------------
@@ -103,7 +103,7 @@ body:not(.page):not(.single) {
 --------------------------------------------------------------*/
 .entry {
 	&-title {
-		font-size: 20px;
+		// font-size: 20px;
 		&:first-child {
 			.post-content-all &,
 			.entry-header & {
@@ -192,7 +192,7 @@ body:not(.page):not(.single) {
 			vertical-align: top;
 			width: 100%;
 			.entry-header + .post-thumbnail > & {
-				margin-top: 25px;
+				margin-top: 2px;
 			}
 		}
 		&--fullwidth {
@@ -274,8 +274,6 @@ body:not(.page):not(.single) {
 			margin-right: 20px;
 		}
 		.single & {
-			margin-right: 0;
-			margin-left: 15px;
 		}
 	}
 	&__tags {
@@ -379,4 +377,8 @@ body:not(.page):not(.single) {
 	.has-post-thumbnail .post-thumbnail--fullwidth + .post__cats {
 		padding-left: 0;
 	}
+}
+
+.entry-footer + .entry-meta {
+	margin-top: 20px;
 }

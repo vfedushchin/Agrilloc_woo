@@ -2,12 +2,15 @@
 	&-author {
 		&-bio {
 			margin: 2em 0;
+			@include media-breakpoint-up(lg) {
+				margin: 2em -0px 3.4em;
+			}
 		}
 		&__holder {
-			padding: 1em;
+			padding: 1em 1em 2em;
 
 			@include media-breakpoint-up(lg) {
-				padding: 2em 2em 1em;
+				padding: 2em 3.9em 2.8em;
 			}
 		}
 		&__avatar {
@@ -29,9 +32,13 @@
 		}
 		&__title {
 			@include media-breakpoint-up(lg) {
-				font-size: 20px;
-				line-height: 1.4;
-				margin: 20px 0;
+				margin: 21px 0 24px;
+			}
+		}
+
+		&__title2 {
+			@include media-breakpoint-up(lg) {
+				margin: 40px 0 9px;
 			}
 		}
 	}

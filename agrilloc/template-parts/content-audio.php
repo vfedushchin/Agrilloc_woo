@@ -7,13 +7,12 @@
  * @package Agrilloc
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'posts-list__item card' ); ?>>
+<?php $blog_content = get_theme_mod( 'blog_posts_content', agrilloc_theme()->customizer->get_default( 'blog_posts_content' ) ); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'posts-list__item card ' . $blog_content .'' ); ?>>
 
 	<?php $utility = agrilloc_utility()->utility; ?>
 
 	<div class="post-list__item-content">
-
-
 
 		<header class="entry-header">
 
@@ -51,15 +50,27 @@
 
 
 			<div class="entry-content">
+				<?php $embed_args = array(
+						'fields' => array( 'soundcloud' ),
+						'height' => 310,
+						'width'  => 310,
+					);
 
-				<?php $blog_content = get_theme_mod( 'blog_posts_content', agrilloc_theme()->customizer->get_default( 'blog_posts_content' ) );
-					$length = ( 'full' === $blog_content ) ? 0 : 35;
+					$embed_content = apply_filters( 'cherry_get_embed_post_formats', false, $embed_args );
 
-					$utility->attributes->get_content( array(
-						'length'       => $length,
-						'content_type' => 'post_excerpt',
-						'echo'         => true,
-					) );
+					if ( false === $embed_content ) {
+
+						$length       = ( 'full' === $blog_content ) ? 0 : 55;
+
+						$utility->attributes->get_content( array(
+							'length'       => $length,
+							'content_type' => 'post_excerpt',
+							'echo'         => true,
+						) );
+
+					} else {
+						printf( '<div class="embed-wrapper">%s</div>', $embed_content );
+					}
 				?>
 			</div><!-- .entry-content -->
 

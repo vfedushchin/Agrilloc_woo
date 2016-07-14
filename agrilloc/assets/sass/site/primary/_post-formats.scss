@@ -189,10 +189,28 @@ body:not(.page):not(.single) {
 .format-status {
 	.entry-header {
 		text-align: center;
+		.post__cats {
+			text-align: left;
+		}
 	}
 	.embed-wrapper {
 		max-width: 100%;
 		display: inline-block;
 		overflow: hidden;
+	}
+}
+.mejs-audio {
+	margin-bottom: 10px;
+}
+.format-audio.full {
+	.post-content-all {
+		.entry-content {
+			margin-top: 0;
+		}
+		p:first-child,
+		.mejs-offscreen,
+		.mejs-container {
+			display: none;
+		}
 	}
 }
